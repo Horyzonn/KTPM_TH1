@@ -13,6 +13,12 @@ bool isPrime(int n) {
 	return true;
 }
 
+bool isLeapYear(int year) {
+	if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+		return true;
+	}
+	return false;
+}
 
 int main(){
 	cout <<  " == MENU== " << endl;
@@ -30,6 +36,13 @@ int main(){
 			cout << num << " la so nguyen to" << endl;
 		}
 		else cout << num << " khong la so nguyen to" << endl;
+	}
+	case 2: {
+		cout << "Nhap nam: ";
+		int year;
+		cin >> year;
+		if (isLeapYear(year)) cout << year << " la nam nhuan" << endl;
+		else cout << year << " khong la nam nhuan" << endl;
 	}
 	}
 	return 0;
